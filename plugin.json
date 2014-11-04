@@ -1,0 +1,12 @@
+{
+    "ID":"D2D2C24A684D411DB66FE1B*9D6C3B7A",
+    "ActionKeyword":"kitty",
+    "Name":"kitty",
+    "Description":"launch Kitty sessions",
+    "Author":"qianlifeng",
+    "Version":"1.0",
+    "Language":"python",
+    "Website":"https://github.com/qianlifeng/Wox.Plugin.Kitty",
+    "ExecuteFileName":"main.py",
+    "IcoPath": "kitty.png"
+}
