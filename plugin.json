@@ -1,10 +1,10 @@
 {
-    "ID":"D2D2C24A684D411DB66FE1B*9D6C3B7A",
+    "ID":"1a4d4dd6915a4ec4932763b8ebe8aab6",
     "ActionKeyword":"kitty",
     "Name":"kitty",
     "Description":"launch Kitty sessions",
     "Author":"qianlifeng",
-    "Version":"1.0",
+    "Version":"1.0.0",
     "Language":"python",
     "Website":"https://github.com/qianlifeng/Wox.Plugin.Kitty",
     "ExecuteFileName":"main.py",
