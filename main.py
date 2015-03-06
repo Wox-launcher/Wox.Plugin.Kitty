@@ -2,6 +2,7 @@
 import json
 import os,sys,webbrowser
 import subprocess
+import urllib
 from wox import Wox
 from os import listdir
 from os.path import isfile, join
@@ -10,7 +11,7 @@ class Kitty(Wox):
 
     def load_session(self,kitty_path):
         session_path = os.path.join(kitty_path,"Sessions")
-        files = [f for f in listdir(session_path) if isfile(join(session_path,f))]
+        files = [urllib.unquote(f) for f in listdir(session_path) if isfile(join(session_path,f))]
         return files
 
     def query(self,query):
