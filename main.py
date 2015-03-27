@@ -17,7 +17,7 @@ class Kitty(Wox):
     def query(self,query):
         with open(os.path.join(os.path.dirname(__file__),"config.json"), "r") as content_file:
             config = json.loads(content_file.read())
-        kitty_folder_path = config["kittyPath"]
+        kitty_folder_path = os.path.expandvars(config["kittyPath"])
         kitty_path = os.path.join(kitty_folder_path,"kitty.exe")
         sessions = self.load_session(kitty_folder_path)
         res = []
