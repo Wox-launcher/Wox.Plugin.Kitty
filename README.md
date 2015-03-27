@@ -5,6 +5,9 @@ Inspired by [wox.plugin.putty](https://github.com/kosz78/wox.plugin.putty), this
 #How to use
 1. Install this plugin via `wpm install kitty`
 2. Edit config.json file in this plugin folder and set the the kitty folder path in your disk
+3. Run the Wox command 'Restart Wox' 
+4. Run the Wox command 'kitty yourSessionHere'
 
 #Notice
-**This plugin doesn't support sessions in folders.**
+* Sessions must be in a folder at the same level as kitty.exe called "Sessions" 
+* Your executable must be named 'kitty.exe' or 'kitty_portable.exe'
