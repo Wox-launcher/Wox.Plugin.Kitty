@@ -17,8 +17,8 @@ class Kitty(Wox):
     def query(self,query):
         with open(os.path.join(os.path.dirname(__file__),"config.json"), "r") as content_file:
             config = json.loads(content_file.read())
-        kitty_folder_path = config["kittyPath"]
-        kitty_path = os.path.join(kitty_folder_path,"kitty.exe")
+        kitty_folder_path = os.path.expandvars(config["kittyPath"])
+        kitty_path = self.find_kitty_path(kitty_folder_path)
         sessions = self.load_session(kitty_folder_path)
         res = []
         for p in sessions:
@@ -28,6 +28,17 @@ class Kitty(Wox):
 
     def open_session(self,kitty_path,session_name):
         subprocess.call('{} -load "{}"'.format(kitty_path,session_name))
+
+    def find_kitty_path(self,kitty_folder_path):
+        """Returns the full path to the user's kitty executable"""
+
+        exe_names = ['kitty.exe', 'kitty_portable.exe']
+        for exe_name in exe_names:
+            attempted_kitty_exe = os.path.join(kitty_folder_path,exe_name)
+            if isfile(attempted_kitty_exe):
+                return attempted_kitty_exe
+
+        raise Exception("Could not find Kitty executable in %s" % kitty_folder_path)
 
 if __name__ == "__main__":
     Kitty()

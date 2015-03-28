@@ -4,7 +4,7 @@
     "Name":"kitty",
     "Description":"launch Kitty sessions",
     "Author":"qianlifeng",
-    "Version":"1.0.0",
+    "Version":"1.0.1",
     "Language":"python",
     "Website":"https://github.com/qianlifeng/Wox.Plugin.Kitty",
     "ExecuteFileName":"main.py",
